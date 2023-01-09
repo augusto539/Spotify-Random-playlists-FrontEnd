@@ -1,0 +1,60 @@
+.Home{
+    height: 100%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-content: space-around; */
+}
+
+.playlist{
+    margin-top: 50px;
+
+    /* background: #ffffff40; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid #ffffff54;
+
+    /* background-color: white; */
+    height: 150px;
+    /* width: 150px; */
+    width: 85%;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    display: flex;
+}
+
+.playlist .img{
+    height: 100%;
+    width: 40%;
+}
+
+.playlist img{
+    height: 100%;
+}
+
+.playlist .info{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    /* color: white; */
+}
+
+.playlist .info .title{
+    font-size: 1.5rem;
+}
+
+
+.verde{
+    /* width: 300px; */
+    background-color: greenyellow;
+}
