@@ -1,6 +1,6 @@
 // React
-import * as React from 'react';
-
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 // MUI
 import Avatar from '@mui/material/Avatar';
 import PersonIcon from '@mui/icons-material/Person';
@@ -9,8 +9,18 @@ import PersonIcon from '@mui/icons-material/Person';
 import './Navbar.css'
 
 
+
 export default function Navbar({UserImgUrl}) {
-  console.log(UserImgUrl)
+  const [UserImg, setUserImg] = useState('');
+
+  useEffect(() => {
+    axios.get('http://192.168.1.37:8888/userinfo')
+    .then((response) => {
+        // console.log(response.data.UserImg[0].url)
+        setUserImg(response.data.UserImg[0].url)
+    });
+  }, []);
+
   return (
     <div className="navbar">
       <Avatar
@@ -21,7 +31,7 @@ export default function Navbar({UserImgUrl}) {
           height: 70  
         }}
         alt="User img"
-        src={UserImgUrl}
+        src={UserImg}
       >
         <PersonIcon sx={{ fontSize: 45 }}/>  
       </Avatar>

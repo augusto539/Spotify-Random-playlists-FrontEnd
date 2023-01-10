@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { usePalette } from 'react-palette'
+// import { usePalette } from 'react-palette'
 
 
 
@@ -13,23 +11,13 @@ import clash from './clash.png'
 
 export default function Home() {
 
-    
-
-    const [UserImg, setUserImg] = useState('');
-    useEffect(() => {
-        axios.get('http://192.168.1.34:8888/info')
-        .then((response) => {
-            // console.log(response.data.UserImg[0].url)
-            setUserImg(response.data.UserImg[0].url)
-        });
-    });
-
-    const { data, loading, error } = usePalette(charly)
+    // const { data, loading, error } = usePalette(charly)
 
     let elements =[]
     for (let kk = 0; kk < 20; kk++) {
         elements.push(
-            <div className="playlist" style={{ 'background-color': data.vibrant + "40" }}>
+            // <div className="playlist" style={{ 'background-color': data.vibrant + "40" }}>
+            <div className="playlist">
                 <div className="img" >
                     <img src={charly} alt="" />
                 </div>
@@ -43,7 +31,7 @@ export default function Home() {
     }
     return(
         <div className="Home">
-            <MovileNavbar UserImgUrl={UserImg}/>
+            <MovileNavbar/>
 
             <div className="playlist verde"></div>
 

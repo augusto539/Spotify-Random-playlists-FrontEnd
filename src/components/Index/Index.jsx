@@ -11,7 +11,7 @@ import './Index.css'
 export default function Index() {
 
     function login(){
-        axios.get('http://192.168.1.34:8888/login')
+        axios.get('http://192.168.1.37:8888/login')
         .then((response) => {
             // console.log("llega al login")
             // console.log(response.data)
