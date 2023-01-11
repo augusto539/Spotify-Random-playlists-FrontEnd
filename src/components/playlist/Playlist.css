@@ -5,7 +5,7 @@
     flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* align-content: space-around; */
+    padding-bottom: 90px;
 }
 
 .song{
@@ -15,8 +15,8 @@
 
     /* background: #ffffff40; */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.9px);
-    -webkit-backdrop-filter: blur(5.9px);
+    /* backdrop-filter: blur(5.9px); */
+    /* -webkit-backdrop-filter: blur(5.9px); */
     border: 1px solid #ffffff54;
 
     /* background-color: white; */

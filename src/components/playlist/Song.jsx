@@ -7,7 +7,7 @@ import AutorenewIcon from '@mui/icons-material/Autorenew';
 
 const fac = new FastAverageColor();
 
-export default function Song({song_name, img, artist_name}) {
+export default function Song({song_name, img, artist_name, song_uri}) {
     const [SongName, setSongName] = useState(song_name);
     const [Img, setImg] = useState(img);
     const [ArtistName, setArtistName] = useState(artist_name);
@@ -21,7 +21,6 @@ export default function Song({song_name, img, artist_name}) {
             setArtistName(response.data[0].artist_name)
         });
     }
-
 
     useEffect(() => {
         fac.getColorAsync(Img)

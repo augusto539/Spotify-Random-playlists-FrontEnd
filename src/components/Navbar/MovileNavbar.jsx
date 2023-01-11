@@ -10,19 +10,21 @@ import './Navbar.css'
 
 
 
-export default function Navbar({UserImgUrl}) {
+export default function Navbar() {
   const [UserImg, setUserImg] = useState('');
+  const [Username, setUsername] = useState('');
 
   useEffect(() => {
     axios.get('http://192.168.1.37:8888/userinfo')
     .then((response) => {
-        // console.log(response.data.UserImg[0].url)
         setUserImg(response.data.UserImg[0].url)
+        setUsername(response.data.Name)
     });
   }, []);
 
   return (
     <div className="navbar">
+      <span className='name'> {Username} </span>
       <Avatar
         className="Avatar"
         sx={{ 
@@ -35,6 +37,7 @@ export default function Navbar({UserImgUrl}) {
       >
         <PersonIcon sx={{ fontSize: 45 }}/>  
       </Avatar>
+      <span className='logout'> log out </span>
     </div>
   );
 }
