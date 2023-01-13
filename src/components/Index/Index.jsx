@@ -13,7 +13,7 @@ import './Index.css'
 export default function Index() {
 
     function login(){
-        axios.get('http://192.168.1.37:8888/login')
+        axios.get(process.env.REACT_APP_BACKENDURL + '/login')
         .then((response) => {
             // console.log("llega al login")
             // console.log(response.data)

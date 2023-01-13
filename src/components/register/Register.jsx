@@ -36,7 +36,7 @@ export default function Register() {
     const {register, handleSubmit} = useForm()
 
     function login(){
-        axios.get('http://192.168.1.37:8888/login')
+        axios.get(process.env.REACT_APP_BACKENDURL + '/login')
         .then((response) => {
             // console.log("llega al login")
             // console.log(response.data)
@@ -45,7 +45,7 @@ export default function Register() {
     }
 
     function onSubmit(data){
-        axios.post('http://192.168.1.37:8888/register', 
+        axios.post(process.env.REACT_APP_BACKENDURL + '/register', 
         {
             user: data.usuario,
             email: data.email

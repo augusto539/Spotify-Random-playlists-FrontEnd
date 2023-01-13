@@ -14,7 +14,7 @@ export default function Song({song_name, img, artist_name, song_uri, uriList}) {
     const [Color, setColor] = useState('');
 
     function change_song(){
-        axios.get('http://192.168.1.37:8888/gettracks/1', { withCredentials: true })
+        axios.get(process.env.REACT_APP_BACKENDURL + '/gettracks/1', { withCredentials: true })
         .then((response) => {
             setSongName(response.data[0].song_name)
             setImg(response.data[0].img.url)

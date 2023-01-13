@@ -16,7 +16,7 @@ export default function Playlist() {
         if (getinfoRef.current) return;
         getinfoRef.current = true;
 
-        axios.get('http://192.168.1.37:8888/gettracks/30', { withCredentials: true })
+        axios.get(process.env.REACT_APP_BACKENDURL + '/gettracks/30', { withCredentials: true })
         .then((response) => {
             setUriList(response.data.map((song) => song.song_uri))
             setData(response.data) 
@@ -24,7 +24,7 @@ export default function Playlist() {
     }, []);
 
     const save = () => {
-        axios.post('http://192.168.1.37:8888/create', 
+        axios.post(process.env.REACT_APP_BACKENDURL + '/create', 
         {
             songs_list: uriList
         }, 
