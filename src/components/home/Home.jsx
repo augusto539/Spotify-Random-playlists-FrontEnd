@@ -1,7 +1,4 @@
 // import { usePalette } from 'react-palette'
-
-
-
 // Components
 import MovileNavbar from '../Navbar/MovileNavbar';
 // Style
