@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // MUI
 import Button from '@mui/material/Button';
 
@@ -17,7 +17,8 @@ export default function Index() {
         .then((response) => {
             // console.log("llega al login")
             // console.log(response.data)
-            window.location.replace(response.data);
+            // window.location.replace(response.data);
+            useNavigate(response.data)
         });
     }
 
