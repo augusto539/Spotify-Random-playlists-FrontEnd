@@ -15,7 +15,7 @@ export default function Navbar() {
   const [Username, setUsername] = useState('');
 
   useEffect(() => {
-    axios.get('http://192.168.1.37:8888/userinfo')
+    axios.get(process.env.REACT_APP_BACKENDURL + '/userinfo')
     .then((response) => {
         setUserImg(response.data.UserImg[0].url)
         setUsername(response.data.Name)

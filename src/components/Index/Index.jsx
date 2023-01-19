@@ -18,6 +18,7 @@ export default function Index() {
             // console.log("llega al login")
             // console.log(response.data)
             // window.location.replace(response.data);
+            console.log(response.data)
             window.location.href = response.data;
             // useNavigate(response.data)
         });
